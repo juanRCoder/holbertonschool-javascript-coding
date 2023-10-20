@@ -14,7 +14,7 @@ request(url, (error, res, body) => {
     if (task.completed) {
       if (results[task.userId]) results[task.userId]++;
       else results[task.userId] = 1;
-    };
+    }
   });
 
   console.log(results);
