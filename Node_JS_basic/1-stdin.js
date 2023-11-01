@@ -7,13 +7,9 @@ const message = readline.createInterface({
 
 console.log('Welcome to Holberton School, what is your name?');
 
-message.on('line', (res) => {
- if (res.trim() === ''){
-   message.close();
-   return;
- }
-
-  const name = res.trim();
+message.on('line', (input) => {
+  const name = input.trim();
+  
   console.log(`Your name is: ${name}`);
   console.log('This important software is now closing');
   message.close();
