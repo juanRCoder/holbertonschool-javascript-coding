@@ -23,9 +23,9 @@ function countStudents(path) {
       }
     });
 
-    console.log(`Número de estudiantes: ${allStudents}`);
-    console.log(`Número de estudiantes en CS: ${studentsByField.CS}. Lista: ${csStudents.join(', ')}`);
-    console.log(`Número de estudiantes en SWE: ${studentsByField.SWE}. Lista: ${sweStudents.join(', ')}`);
+    console.log(`Number of students: ${allStudents}`);
+    console.log(`Number of students in CS: ${studentsByField.CS}. List: ${csStudents.join(', ')}`);
+    console.log(`Number of students in SWE: ${studentsByField.SWE}. List: ${sweStudents.join(', ')}`);
   } catch (e) {
     throw Error('No se puede cargar la base de datos');
   }
