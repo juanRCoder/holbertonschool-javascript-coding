@@ -27,7 +27,7 @@ function countStudents(path) {
     console.log(`Number of students in CS: ${studentsByField.CS}. List: ${csStudents.join(', ')}`);
     console.log(`Number of students in SWE: ${studentsByField.SWE}. List: ${sweStudents.join(', ')}`);
   } catch (e) {
-    throw Error('No se puede cargar la base de datos');
+    throw Error('Cannot load the database');
   }
 }
 
