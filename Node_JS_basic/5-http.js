@@ -8,6 +8,7 @@ const app = http.createServer((req, res) => {
   const { url } = req;
 
   if (url === '/') {
+    res.writeHead(200, { 'Content-Type': 'text/plain' });
     res.end('Hello Holberton School!');
   } else if (url === '/students') {
     countStudents(database)
@@ -17,13 +18,13 @@ const app = http.createServer((req, res) => {
           Number of students: ${data.totalStudents}\n
           Number of students in CS: ${students.CS.count}. List: ${students.CS.list.join(', ')}\n
           Number of students in SWE: ${students.SWE.count}. List: ${students.SWE.list.join(', ')}`;
+        res.writeHead(200, { 'Content-Type': 'text/plain' });
         res.end(response);
       })
       .catch((error) => {
         console.error(error);
+        res.writeHead(500, { 'Content-Type': 'text/plain' });
       });
-  } else {
-    res.end('Not Found');
   }
 });
 
